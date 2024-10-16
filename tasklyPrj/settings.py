@@ -82,6 +82,16 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK ={
+	'DEFAULT_PERMISSION_CLASSES':[
+		'rest_framework.permissions.IsAuthenticatedOrReadOnly'
+	],
+ 'DEFAULT_AUTHENTICATION_CLASSES':[
+     #Rest Framework Authentication calles	
+	 'rest_framework.authentication.BasicAuthentication',
+  'rest_framework.authentication.SessionAuthentication',
+ ]
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
